@@ -5,6 +5,10 @@
             {
                 "targets": "> 0.25%, not dead"
             }
-        ]
+        ],
+        "minify"
+    ],
+    "plugins": [
+        "@babel/plugin-transform-typescript"
     ]
 }

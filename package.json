@@ -4,7 +4,7 @@
   "description": "Implementation of Packet API to Tilda",
   "main": "zasilkovna-tilda-widget.js",
   "scripts": {
-    "build": "babel src --out-file lib/index.js --extensions '.ts'"
+    "build": "babel src --out-file lib/zasilkovna-tilda-widget.js --extensions '.ts'"
   },
   "repository": {
     "type": "git",

@@ -1,28 +1,22 @@
 {
-  "name": "zasilkovna-tilda-widget",
-  "version": "0.0.1",
-  "description": "Implementation of Packet API to Tilda",
-  "main": "zasilkovna-tilda-widget.js",
-  "scripts": {
-    "build": "babel src --out-file lib/index.min.js --no-comments && browserify lib/index.min.js -o lib/index.min.js"
+  "name": "rollup-starter-lib",
+  "version": "1.0.0",
+  "main": "dist/zasilkovna-tilda-widget.cjs.js",
+  "module": "dist/zasilkovna-tilda-widget.esm.js",
+  "browser": "dist/zasilkovna-tilda-widget.umd.js",
+  "dependencies": {
+    "ms": "^2.1.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jonasNobile/zasilkovna-tilda-widget.git"
-  },
-  "author": "Jonáš Nobile <jonas@nobile.family> (https://nobile.family/)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jonasNobile/zasilkovna-tilda-widget/issues"
-  },
-  "homepage": "https://github.com/jonasNobile/zasilkovna-tilda-widget#readme",
   "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/plugin-transform-typescript": "^7.12.1",
-    "@babel/preset-env": "^7.12.7",
-    "babel-preset-minify": "^0.5.1",
-    "browserify": "^17.0.0"
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup": "^2.34.0"
   },
-  "dependencies": {}
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "files": [
+    "dist"
+  ]
 }

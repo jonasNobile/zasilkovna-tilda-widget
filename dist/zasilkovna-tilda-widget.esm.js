@@ -1,12 +1,22 @@
 function saveSelectedPickupPoint(point) {
-    var zasilkovnaOutput = document.querySelector('[name="packeta-point-id"]'); // check the real name of input
-  
-    if (point) {
-      zasilkovnaOutput.value = "id: ".concat(point.id, ", place: ").concat(point.place, ", url: ").concat(point.url);
-    } else {
-      zasilkovnaOutput.value = "None";
-    }
+  const zasilkovnaOutput = document.querySelector('[name="packeta-point-id"]');
+  const zasilkovnaButton = document.querySelector(
+    '[name="Delivery"][value*="Zásilkovna"]'
+  );
+
+  if (point) {
+    zasilkovnaOutput.value = "id: "
+      .concat(point.id, ", place: ")
+      .concat(point.place, ", url: ")
+      .concat(point.url);
+
+    const element = document.createElement("span");
+    element.innerText = `(${point.place}, ${point.city})`;
+    zasilkovnaButton.parentNode.appendChild(element);
+  } else {
+    zasilkovnaOutput.value = "None";
   }
+}
 
 (function () {
   const apiKey = document.currentScript.getAttribute("apiKey");

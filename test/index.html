@@ -3,10 +3,40 @@
     <script src="https://widget.packeta.com/www/js/library.js"></script>
     <script
       src="../dist/zasilkovna-tilda-widget.umd.js"
-      apikey="yourApiKey"
+      apikey="c4896e2354fea9dd"
     ></script>
   </head>
   <body>
-      <button name="Delivery" value="Zásilkovna">Zásilkovna</button>
+    <div class="t-input-group t-input-group_dl" data-input-lid="1606937622419">
+      <div
+        class="t-input-title t-descr t-descr_md"
+        data-redactor-toolbar="no"
+        field="li_title__1606937622419"
+        style=""
+      >
+        Delivery
+      </div>
+      <div class="t-input-block">
+        <div
+          class="t-radio__wrapper t-radio__wrapper-delivery"
+          data-delivery-variants-hook="y"
+        >
+          <label class="t-radio__control t-text t-text_xs"
+            ><input
+              type="radio"
+              name="Delivery"
+              value="Zásilkovna 65 Kč = 65"
+              class="t-radio t-radio_delivery js-tilda-rule"
+              data-tilda-req="1"
+              data-delivery-price=" 65"
+            />
+            <div class="t-radio__indicator"></div>
+            Zásilkovna 65 Kč
+          </label>
+        </div>
+        <div class="t-input-error"></div>
+      </div>
+    </div>
+    <input type="hidden" name="packeta-point-id" />
   </body>
 </html>

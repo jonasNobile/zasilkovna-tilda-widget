@@ -23,7 +23,7 @@ function saveSelectedPickupPoint(point) {
 (function () {
   const apiKey = document.currentScript.getAttribute("apiKey");
   window.onload = () => {
-    const zasilkovnaButton = document.querySelector('[name="Delivery"][value*="Zásilkovna"]');
+    const zasilkovnaButton = document.querySelector('[value*="Zásilkovna"]');
 
     if (zasilkovnaButton) {
       zasilkovnaButton.addEventListener(

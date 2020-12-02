@@ -3,7 +3,8 @@
         [
             "@babel/env",
             {
-                "targets": "> 0.25%, not dead"
+                "targets": "defaults",
+                "modules": "amd"
             }
         ],
         "minify"

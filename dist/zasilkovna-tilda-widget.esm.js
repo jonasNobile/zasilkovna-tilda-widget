@@ -8,8 +8,6 @@ function saveSelectedPickupPoint(point) {
     }
   }
 
-let Packeta;
-
 (function () {
   const apiKey = document.currentScript.getAttribute("apiKey");
   window.onload = () => {

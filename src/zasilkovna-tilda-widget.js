@@ -1,6 +1,6 @@
 import { saveSelectedPickupPoint } from "./utils/saveSelectedPickupPoint";
 
-let Packeta: { 'Widget' };
+let Packeta;
 
 (function () {
   const apiKey = document.currentScript.getAttribute("apiKey");

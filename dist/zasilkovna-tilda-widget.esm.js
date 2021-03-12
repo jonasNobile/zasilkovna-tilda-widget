@@ -1,32 +1,37 @@
-function saveSelectedPickupPoint(point) {
-  const zasilkovnaOutput = document.querySelector('[name="packeta-point-id"]');
-  const zasilkovnaButton = document.querySelector(
-    '[name="Delivery"][value*="Zásilkovna"]'
-  );
-
-  if (point) {
+function saveSelectedPickupPoint(
+  point,
+  zasilkovnaButton,
+  zasilkovnaOutput
+) {
+  const element = document.createElement("span");
+  if (point && zasilkovnaButton && zasilkovnaOutput) {
     zasilkovnaOutput.value = "id: "
       .concat(point.id, ", place: ")
       .concat(point.place, ", url: ")
       .concat(point.url);
-
-    const element = document.createElement("span");
     element.innerText = `(${point.place}, ${point.city})`;
-    zasilkovnaButton.parentNode.appendChild(element);
   } else {
+    element.innerText = "Something went wrong. Please try it again.";
     zasilkovnaOutput.value = "None";
   }
+
+  zasilkovnaButton.parentNode.appendChild(element);
 }
 
 (function () {
   const apiKey = document.currentScript.getAttribute("apiKey");
   window.onload = () => {
     const zasilkovnaButton = document.querySelector('[value*="Zásilkovna"]');
+    const zasilkovnaOutput = document.querySelector('[name="packeta-point-id"]');
 
     if (zasilkovnaButton) {
       zasilkovnaButton.addEventListener(
-        "click",
-        () => Packeta.Widget.pick(apiKey, saveSelectedPickupPoint),
+        "change",
+        () => {
+          Packeta.Widget.pick(apiKey, (point) => {
+            saveSelectedPickupPoint(point, zasilkovnaButton, zasilkovnaOutput);
+          });
+        },
         false
       );
     }

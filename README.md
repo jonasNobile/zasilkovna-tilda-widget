@@ -1,7 +1,7 @@
 # Zasilkovna widget for Tilda
 ## Documentation
 1. Put `<script src="https://widget.packeta.com/www/js/library.js"></script>` to the head tag.
-2. Put `<script src="..." apikey="yourApiKey"></script>` to the head tag **(has to be below Packeta library).**
+2. Put `<script src="https://cdn.jsdelivr.net/gh/jonasNobile/zasilkovna-tilda-widget@latest/dist/zasilkovna-tilda-widget.umd.js" apikey="yourApiKey"></script>` to the head tag **(has to be below Packeta library).**
 3. Add hidden filed in **ST100** block for pick-up place information with variable name `packeta-point-id`.
 4. Add delivery variants input in **ST100** block and add `Zásilkovna 65 Kč = 65`.
 

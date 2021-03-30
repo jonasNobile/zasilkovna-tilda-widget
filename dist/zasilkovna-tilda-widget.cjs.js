@@ -15,6 +15,7 @@ function saveSelectedPickupPoint(
   } else {
     element.innerText = "Something went wrong. Please try it again.";
     zasilkovnaOutput.value = "None";
+    zasilkovnaButton.checked = false;
   }
 
   zasilkovnaButton.parentNode.appendChild(element);
